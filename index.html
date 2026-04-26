@@ -66,6 +66,8 @@
         myHour = myDate.getHours();
         mySentence = "";
         myColor = "";
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const myDay = days[myDate.getDay()];
 
         // Morning
         if (myHour >= 5 && myHour < 12) {
@@ -100,7 +102,7 @@
             document.getElementById('time-pic').alt = 'Night picture';
         }
 
-        document.getElementById("time-text").innerHTML = mySentence;
+        document.getElementById("time-text").innerHTML = mySentence + "<br>Today is " + myDay;
         document.getElementById("time-text").style.fontFamily = myFont;
         //document.body.style.backgroundColor = myColor;
         document.querySelector('html').style.backgroundColor = myColor;
