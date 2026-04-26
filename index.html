@@ -71,6 +71,7 @@
         if (myHour >= 5 && myHour < 12) {
             mySentence = "Good Mornig!";
             myColor = "aliceblue";
+            myFont = "'Pacifico', cursive";
             document.getElementById('time-pic').src = 'images/good_morning.png';
             document.getElementById('time-pic').alt = 'Morning picture';
 
@@ -78,6 +79,7 @@
         } else if (myHour >= 12 && myHour < 18) {
             mySentence = "Good Afternoon!";
             myColor = "lightskyblue";
+            myFont = "'Lato', sans-serif";
             document.getElementById('time-pic').src = 'images/good_afternoon.png';
             document.getElementById('time-pic').alt = 'Afternoon picture';
 
@@ -85,6 +87,7 @@
         } else if (myHour >= 18 && myHour < 23) {
             mySentence = "Good Evening!";
             myColor = "orange";
+            myFont = "'Playfair Display', serif";
             document.getElementById('time-pic').src = 'images/good_evening.png';
             document.getElementById('time-pic').alt = 'Evening picture';
 
@@ -92,11 +95,13 @@
         } else {
             mySentence = "Good Night!";
             myColor = "midnightblue";
+            myFont = "'Courier New', monospace";
             document.getElementById('time-pic').src = 'images/good_night.png';
             document.getElementById('time-pic').alt = 'Night picture';
         }
 
         document.getElementById("time-text").innerHTML = mySentence;
+        document.getElementById("time-text").style.fontFamily = myFont;
         //document.body.style.backgroundColor = myColor;
         document.querySelector('html').style.backgroundColor = myColor;
 
