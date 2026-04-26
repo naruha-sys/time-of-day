@@ -67,19 +67,41 @@
         mySentence = "";
         myColor = "";
 
-        if (myHour >= 12) {
-                    //alert("It's after noon!");
-                    mySentence = "It's after noon!";
-                    myColor = "blue";
+        const img = document.createElement('img');
+
+        // Morning
+        if (myHour >= 5 && myHour < 12) {
+            mySentence = "Good Mornig!";
+            myColor = "aliceblue";
+            img.src = 'images/good_morning.png';
+            img.alt = 'Morning picture';
+
+        // Afternoon
+        } else if (myHour >= 12 && myHour < 18) {
+            mySentence = "Good Afternoon!";
+            myColor = "lightskyblue";
+            img.src = 'images/good_afternoon.png';
+            img.alt = 'Afternoon picture';
+
+        // Evening
+        } else if (myHour >= 18 && myHour < 23) {
+            mySentence = "Good Evening!";
+            myColor = "orange";
+            img.src = 'images/good_evening.png';
+            img.alt = 'Evening picture';
+
+        // Night
         } else {
-                    //alert("It's not after noon");
-                    mySentence = "It's not after noon!";
-                    myColor = "purple";
+            mySentence = "Good Night!";
+            myColor = "midnightblue";
+            img.src = 'images/good_night.png';
+            img.alt = 'Night picture';
         }
 
         document.getElementById("time-text").innerHTML = mySentence;
         //document.body.style.backgroundColor = myColor;
         document.querySelector('html').style.backgroundColor = myColor;
+        document.getElementById('#time-pic').appendChild(img);
 
         // Fixes HTML/CSS Checker links
         document.addEventListener("DOMContentLoaded", function() {
